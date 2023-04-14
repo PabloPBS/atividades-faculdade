@@ -7,6 +7,5 @@ public class questao10 {
         System.out.println ("Despesa total do trimestre: R$" + despesaTotal);
         double mediaDespesa = despesaTotal/3;
         System.out.println("Média mensal dos gastos: R$" + mediaDespesa);
-
     }
 }
