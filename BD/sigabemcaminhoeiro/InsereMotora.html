@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+<head>
+    <title>Cadastro de Motoristas</title>
+</head>
+<body>
+
+    <h1>Cadastro de Motorista</h1>
+
+    <form action="salva_motora.php" method="post">
+        <label for="cnhMotora">CNH do Motorista: </label>
+        <input type="text" name="cnhMotora" id="cnhMotora" required><br>
+
+        <label for="salMotora">Salário do Motorista: :</label>
+        <input type="number" name="salMotora" id="salMotora" step="0.1" required><br>
+
+        <label for="idFuncionario">ID do Funcionário: </label>
+        <input type="number" name="idFuncionario" id="idFuncionario" required><br>
+
+        <input type="submit" value="Salvar">
+    </form>
+
+</body>
+</html>

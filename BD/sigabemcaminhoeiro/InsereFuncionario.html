@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+<head>
+    <title>Cadastro de Funcionários</title>
+</head>
+<body>
+
+    <h1>Cadastro de Funcionário</h1>
+
+    <form action="salva_func.php" method="post">
+        <label for="nomeFuncionario">Nome do Funcionário: </label>
+        <input type="text" name="nomeFuncionario" id="nomeFuncionario" required><br>
+
+        <label for="cpfFuncionario">CPF do Funcionário: :</label>
+        <input type="text" name="cpfFuncionario" id="cpfFuncionario" step="0.1" required><br>
+
+        <label for="enderecoFuncionario">Endereço do Funcionário: </label>
+        <input type="text" name="enderecoFuncionario" id="enderecoFuncionario" required><br>
+
+        <label for="telefoneFuncionario">Telefone do Funcionário: </label>
+        <input type="text" name="telefoneFuncionario" id="telefoneFuncionario" required><br>
+
+        <label for="dataADFuncionario">Data de adição do Funcionário: </label>
+        <input type="date" name="dataADFuncionario" id="dataADFuncionario" required><br>
+
+        <input type="submit" value="Salvar">
+    </form>
+
+</body>
+</html>

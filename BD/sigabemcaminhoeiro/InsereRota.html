@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cadastro de Rota</title>
+</head>
+<body>
+
+    <h1>Cadastro de Rota</h1>
+
+    <form action="salva_rota.php" method="post">
+        <label for="longitude">Longitude:</label>
+        <input type="text" name="longitude" id="longitude" required><br>
+
+        <label for="latitude">Latitude:</label>
+        <input type="text" name="latitude" id="latitude" required><br>
+
+        <label for="horaS">Hora de Saída:</label>
+        <input type="datetime-local" name="horaS" id="horaS" required><br>
+
+        <label for="horaC">Hora de Chegada:</label>
+        <input type="datetime-local" name="horaC" id="horaC" required><br>
+
+        <label for="idMotorista">ID do Motorista:</label>
+        <input type="number" name="idMotorista" id="idMotorista" required><br>
+
+        <input type="submit" value="Salvar">
+    </form>
+
+</body>
+</html>
