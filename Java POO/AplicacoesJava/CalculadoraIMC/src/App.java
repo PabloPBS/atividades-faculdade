@@ -4,28 +4,18 @@ public class App {
     public static void main(String[] args) throws Exception {
 
         Scanner scan = new Scanner(System.in);
+        Imc imc = new Imc();
+        Pessoa user = new Pessoa();
 
         System.out.print("Digite seu peso (Kg): ");
-        double peso = scan.nextDouble();
+        user.setPeso(scan.nextDouble());
         System.out.print("Digite sua altura (m): ");
-        double altura = scan.nextDouble();
+        user.setAltura(scan.nextDouble());
 
-        double imc = peso/(Math.pow(altura, 2));
+        imc.setValor(imc.calcularIMC(user.getPeso(), user.getAltura()));
 
-        System.out.printf("%nValor de seu IMC: %.2f%n", imc);
+        System.out.printf("%nValor de seu IMC: %.2f%n", imc.getValor());
 
-        if (imc < 18.5) {
-            System.out.println("Abaixo do peso.");
-        } else if (imc < 25) {
-            System.out.println("Peso ideal");
-        } else if (imc < 30) {
-            System.out.println("Levemente acima do peso");
-        } else if (imc < 35) {
-            System.out.println("Obesidade grau 1");
-        } else if (imc < 40) {
-            System.out.println("Obesidade grau 2");
-        } else {
-            System.out.println("Obesidade 3");
-        }
+        System.out.println("Classificação: " + imc.classificacaoImc(imc.getValor()));
     }
 }
