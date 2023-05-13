@@ -4,7 +4,6 @@ public class App {
     public static void main(String[] args) throws Exception {
 
         Scanner scan = new Scanner(System.in);
-        Imc imc = new Imc();
         Pessoa user = new Pessoa();
 
         System.out.print("Digite seu peso (Kg): ");
@@ -12,10 +11,11 @@ public class App {
         System.out.print("Digite sua altura (m): ");
         user.setAltura(scan.nextDouble());
 
-        imc.setValor(imc.calcularIMC(user.getPeso(), user.getAltura()));
+        user.calcularImc(user.getPeso(), user.getAltura());
+        user.classificacaoImc(user.getValorImc());
 
-        System.out.printf("%nValor de seu IMC: %.2f%n", imc.getValor());
+        System.out.printf("%nValor de seu IMC: %.2f%n", user.getValorImc());
 
-        System.out.println("Classificação: " + imc.classificacaoImc(imc.getValor()));
+        System.out.println("Classificação: " + user.getClassificacaoImc());
     }
 }
