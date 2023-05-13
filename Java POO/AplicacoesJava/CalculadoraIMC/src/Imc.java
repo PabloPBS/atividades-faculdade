@@ -11,15 +11,15 @@ public class Imc {
         if (valor < 18.5) {
             this.classificacao = "Abaixo do peso.";
         } else if (valor < 25) {
-            this.classificacao = "Peso ideal";
+            this.classificacao = "Peso ideal.";
         } else if (valor < 30) {
-            this.classificacao = "Levemente acima do peso";
+            this.classificacao = "Levemente acima do peso.";
         } else if (valor < 35) {
-            this.classificacao = "Obesidade grau 1";
+            this.classificacao = "Obesidade grau 1.";
         } else if (valor < 40) {
-            this.classificacao = "Obesidade grau 2";
+            this.classificacao = "Obesidade grau 2.";
         } else {
-            this.classificacao = "Obesidade grau 3";
+            this.classificacao = "Obesidade grau 3.";
         }
 
         return this.classificacao;
