@@ -1,23 +1,26 @@
-import java.util.Scanner;
-
 public class Moeda {
-    public static void main(String[] args) throws Exception {
-        
-        Scanner scan = new Scanner(System.in);
-        String res;
 
-        do {
-            System.out.print("Digite o dinheiro em reais para ver quantos dólares podem ser comprados: R$");
-            double real = scan.nextDouble();
+    private double valorReal;
+    private double valorDolar;
 
-            double dolar = real/4.88;
+    public void paraDolar (double real) {
+        double dolar = getValorReal()/4.88;
+       this.valorDolar = dolar;
+    }
 
-            System.out.printf("Com R$%.2f, você pode comprar US$%.2f dólares. (Cotação de 13/04)", real, dolar);
+    public void setValorReal(double real) {
+        this.valorReal = real;
+    }
 
-            System.out.println("\nDeseja realizar outra operação? (S/N)");
-            res = scan.next();
-            System.out.println("-=-=-");
-        } while (res.equals("S") || res.equals("s"));
-        System.out.println("Encerrando programa...");
+    public double getValorReal() {
+        return this.valorReal;
+    }
+
+    public void setValorDolar(double dolar) {
+        this.valorDolar = dolar;
+    }
+
+    public double getValorDolar() {
+        return this.valorDolar;
     }
 }
